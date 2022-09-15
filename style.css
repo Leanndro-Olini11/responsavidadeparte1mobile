@@ -1,0 +1,127 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+:root {
+    --hue: 250;
+    --fc-segundrying: hsla(var(--hue), 17%, 62%, 1);
+    --fc-color: hsla(var(--hue), 100%, 97%, 1);
+}
+
+:root {
+    font-size: 62.5%; /*10px*/
+}
+body {
+    background-color: var(--fc-color); 
+    max-width: 38.4rem;
+    max-height: 200rem;
+    text-align: center;
+    align-items: center; 
+    margin: 0 auto; 
+}
+.page {
+padding: 0 3.2rem;
+font-family: 'Palanquin', sans-serif;
+font-family: 'Staatliches', 'cursive';
+  
+}
+header {
+    background-color: var(--fc-segundrying);
+    padding-bottom: 2.9rem;
+}
+header img {
+    margin-top: 3.2rem;
+}
+header h1 {
+    font-weight: 400;
+    font-size: 4.0rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: #ffffff;
+    margin-top: 3.2rem;
+    
+
+    background: #CBC0D3;
+    padding: 0.8rem 40px;
+
+}
+
+p {
+    font-family: 'Palanquin', sans-serif;
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 1.5rem;
+    color: #23053A;
+    margin: 1.4rem auto 6.3rem;
+
+    display: flex;
+    text-align: center;
+    align-items: center;
+}
+/*colocando a class relativo a posição para adiconar texto em cima da imagem*/ 
+.card {
+    position: relative;
+}
+
+.card h2 {
+    background: hsla(312, 91%, 96%, 1);
+    border-radius: 2.0rem;
+    width: 11.2rem;
+    height: 3.5rem;
+    align-items: center;
+
+    font-family: 'Staatliches';
+
+    font-weight: 400;
+    font-size: 2.0rem;
+    line-height: 3.4rem;
+    letter-spacing: 0.05em;
+    color: #4A4E69;
+    
+    content: '';
+    position: absolute;
+    top: 1.6rem;
+    right: 1.6rem;
+}
+
+.card img  {
+    margin-bottom: 3.2rem;
+/*transição que a imagem vai passar ao rolar o mouse e o tempo*/   
+    transition: 200ms;
+/*filtro em CSS primeiro brilho e segundo saturação*/
+    
+}
+/*ao passar o mouse em cima a imagem cria um zoom*/
+.card img:hover {
+/*scale e o tanto de zoom é usado se vai de 0 a 2*/    
+    transform: scale(1.1);
+}
+.card h2 {
+    animation: fromtop 0.7s  0.2s backwards;
+}
+@keyframes fromtop {
+    from {
+        opacity: 0;
+        transform: translateY(-30px);
+    }
+    top {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+ .card img {
+    animation: frombottom 0.5s backwards;
+ }
+@keyframes frombottom {
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+    bottom {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+    
+
